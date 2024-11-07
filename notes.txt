@@ -1,0 +1,27 @@
+- component.ts file contains the properties and methods of the component to be used in the html file
+- index.html is the main HTML file whose content will be changed when we navigate
+- Every Angular application must have at least one componwnt and one module
+- main.ts is the starting point of the Angular application
+- styles.css ==> global styles
+- test.ts ==> for setting testing environment
+- TypeScript is often referred to as a superset of JavaScript because it builds on top of JavaScript by adding additional features while still maintaining compatibility with regular JavaScript.
+- TypeScript is strongly typed
+- TypeScript has OOP features that JS doesn't have
+- With TS we can catch errors at compile time
+- script files in index.html is injected using Angulat CLI
+- Component is a TS class decorated with @Component decorator
+- a decorator: adds metadata to the class, making it a component
+- We can use a selector as an html attribute, css class ot html tag ONLY
+- We can pass data from view template to component class and vice versa
+- Directives are instructions to the DOM
+- ngStyle for setting styles dynamically based on a typescript expression
+-- Directives:
+	- ngIf, else, ng-template
+	- ngFor
+	- ngStyle
+	- ngClass
+-- Decorators:
+	- input: to pass data from parent to child component
+	- output: to pass data from child to parent component
+- We can't use 2 structural directives on the same HTML element
+

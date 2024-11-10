@@ -1,0 +1,94 @@
+<!-- Events and functions call -->
+<h1>Button Function</h1>
+<button (click)="getName('Donia')">Click Me</button>
+<br/> <br/>
+<button (click)="getName(100)">Click Me For Number</button>
+<br/> <br/>
+<input type="text" #box1 placeholder="keyup box" (keyup)="getName(box1.value)"/>
+<br/> <br/>
+<input type="text" #box2 placeholder="blur box" (blur)="getName(box2.value)"/>
+<br/> <br/>
+
+<!-- ngIf -->
+<h1 *ngIf="show else elseBlock">If condition</h1>
+<ng-template #elseBlock>
+  <h1>Else condition</h1>
+</ng-template>
+
+<h1 *ngIf="show; then ifBlock else elseBlock">If condition</h1>
+<ng-template #elseBlock>
+  <h1>Else condition</h1>
+</ng-template>
+<ng-template #ifBlock>
+  <h1>If condition</h1>
+</ng-template>
+
+<ng-template [ngIf]= "color === 'red'">
+  <h1 style="color:red">Red Color</h1>
+</ng-template>
+
+<div *ngFor="let user of users">
+  <p>User name: {{user}}</p>
+</div>
+
+<!-- Style binding -->
+<h1 [style.color]="color">Style Binding</h1>
+
+<!-- Child Component -->
+<app-child [item]="childData" (updateDataEvent)="updateData($event)"></app-child>
+<br/>
+<br/>
+<!-- Two Way Binding -->
+<p>Two Way Binding</p>
+<input type="text" [(ngModel)]="data"/>
+<h3>{{data}}</h3>
+
+<!-- Using Pipes -->
+<h1>{{title | uppercase}}</h1>
+<h1>{{title | lowercase}}</h1>
+<h1>{{title}}</h1>
+<h1>{{title | slice:3:8}}</h1>
+<h1>{{userData | json}}</h1>
+<h1>{{today | date: 'fullDate'}}</h1>
+<h2>{{003.4000 | number}}</h2>
+<h2>{{100 | currency:'EUR'}}</h2>
+<!--------------------------------------------------------------------------------------------->
+<!-- dealing with forms -->
+<!--------------------------------------------------------------------------------------------->
+<!-- Template Form -->
+<hr/>
+<h2>Template Form</h2>
+<hr/>
+<form #loginTemplateForm="ngForm" (ngSubmit)="loginUser(loginTemplateForm.value)">
+  <!-- use ngModel fo bind the form item to the form -->
+  <input type="text" required #name="ngModel" name="name" placeholder="name" ngModel/>
+  <br/>
+  <!-- add name.touched so the error message doesn't appear innintially -->
+  <span *ngIf="name.invalid && name.touched" style="color: red;">Please Enter a valid name</span>
+  <br/>
+  <br/>
+  <input type="password"required minlength="2" #password="ngModel" name="password" placeholder="password" ngModel/>
+  <br/>
+  <span *ngIf="password.invalid && password.touched" style="color: red;">Please Enter a valid name</span>
+  <br/>
+  <br/>
+  <button [disabled]="loginTemplateForm.invalid">Login</button>
+</form>
+<!--------------------------------------------------------------------------------------------->
+<!-- Reactive form -->
+<!--------------------------------------------------------------------------------------------->
+<hr/>
+<h2>Reactive Form</h2>
+<hr/>
+<form [formGroup]="loginForm" (ngSubmit)="loginUserReactive()">
+<input type="text" name="name" placeholder="name" formControlName="user"/>
+<br/>
+<span *ngIf="user && user.invalid &&user.touched" style="color: red;">This input field is not valid</span>
+<br/> <br/>
+<input type="password" name="password" placeholder="password" formControlName="password"/>
+<br/> <br/>
+<button [disabled]="loginForm.invalid">Login</button>
+</form>
+<!--------------------------------------------------------------------------------------------->
+<!-- Directives -->
+<h1 appRedEl>Directives tutorial</h1>

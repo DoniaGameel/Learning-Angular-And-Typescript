@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "password": "alice123"
+    },
+    {
+      "id": "2",
+      "name": "Bob Smith",
+      "email": "bob.smith@example.com",
+      "password": "bobpass456"
+    },
+    {
+      "id": "3",
+      "name": "Carol Williams",
+      "email": "carol.williams@example.com",
+      "password": "carol789"
+    },
+    {
+      "id": "4",
+      "name": "David Brown",
+      "email": "david.brown@example.com",
+      "password": "davidpass101"
+    },
+    {
+      "id": "5",
+      "name": "Eve Davis",
+      "email": "eve.davis@example.com",
+      "password": "evepass202"
+    },
+    {
+      "id": "6",
+      "name": "Frank Miller",
+      "email": "frank.miller@example.com",
+      "password": "frankpass303"
+    },
+    {
+      "id": "7",
+      "name": "Grace Lee",
+      "email": "grace.lee@example.com",
+      "password": "gracepass404"
+    },
+    {
+      "id": "8",
+      "name": "Henry Wilson",
+      "email": "henry.wilson@example.com",
+      "password": "henrypass505"
+    },
+    {
+      "id": "9",
+      "name": "Ivy Martinez",
+      "email": "ivy.martinez@example.com",
+      "password": "ivypass606"
+    },
+    {
+      "id": "10",
+      "name": "Jack Anderson",
+      "email": "jack.anderson@example.com",
+      "password": "jackpass707"
+    },
+    {
+      "id": "715d",
+      "name": "donia",
+      "email": "doniagameel34@gmail.com",
+      "password": "123"
+    }
+  ]
+}

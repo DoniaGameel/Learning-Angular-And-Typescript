@@ -1,0 +1,16 @@
+<div class="footer">
+  <h1>Footer</h1>
+  <!-- Data before using service -->
+  <ul>
+  <li *ngFor="let member of memberData">
+    {{member.email}}
+  </li>
+</ul>
+
+<!-- Data after using service -->
+<ul>
+  <li *ngFor="let member of usersData">
+    {{member.email}}
+  </li>
+</ul>
+</div>

@@ -24,4 +24,10 @@
 	- input: to pass data from parent to child component
 	- output: to pass data from child to parent component
 - We can't use 2 structural directives on the same HTML element
+- Module is a complete feature of your application: like user auth
+- interploation isn't recommended for properties ==> use property binding instead
+- two way binding = updating and displaying property in the same time
+
+- Forms:
+-- data flow wiith forms: template => class => service => database
 
